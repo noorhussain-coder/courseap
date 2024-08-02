@@ -29,6 +29,7 @@ app.use("/api/v1/",course)
 app.use("/api/v1/",user)
 // app.use("/api/v1/",payment)
 app.use("/api/v1/",others)
+app.get("/",(req,res)=>res.send(`<h1>site is working <a href=${process.env.FRONTEND_URL}>Click here</a>  to visited server is running</h1>`))
 
 export default app
 app.use(ErrorMiddleware)
